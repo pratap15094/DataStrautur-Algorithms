@@ -1,0 +1,35 @@
+package SinglyLinkeList;
+
+import java.util.Scanner;
+
+public class LastN_NodeSum {
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter Size of LinkedList: ");
+		int n = scan.nextInt();
+		LinkedList list = new LinkedList();
+		for(int i=1; i<=n; i++) {
+			
+			int data=scan.nextInt();
+			list.addLast(data);
+		}
+		
+	}
+	
+	//Return the sum of last k nodes
+    public static int  sumOfLastN_Nodes(Node head, int k){
+      Node currNode
+    }
+   
+    public static int sizeOfLinkedList(Node head) {
+    	
+    	int len=0;
+    	Node currNode = head;
+    	
+    	while(currNode!=null) {
+    		len++;
+    		currNode=currNode.next;
+    	}
+    return len;	
+    }
+}

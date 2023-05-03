@@ -1,0 +1,12 @@
+package DateAndTime;
+
+import java.util.Calendar;
+
+public class Example1 {
+	
+	public static void main(String[] args) {
+		
+		Calendar cal =  Calendar.getInstance();  
+	}
+
+}

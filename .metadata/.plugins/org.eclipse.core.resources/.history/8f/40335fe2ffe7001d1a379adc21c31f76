@@ -1,0 +1,41 @@
+package Matixes;
+
+import java.util.Scanner;
+
+public class MultiplyTwoMatrices {
+	public static void main(String args[]) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter N*N matrix");
+		int n= scan.nextInt();
+	
+		
+		System.out.println("Enter matrix-1");
+		int[][] matrix1 =  new int[n][n];
+		for(int i=0; i<n ;i++) {
+			for(int j=0; j<n ;j++) {
+				matrix1[i][j]=scan.nextInt();
+			}	
+		}
+		System.out.println("Enter matrix-2");
+		int[][] matrix2 =  new int[n][n];
+		for(int i=0; i<n ;i++) {
+			for(int j=0; j<n ;j++) {
+				matrix2[i][j]=scan.nextInt();
+			}	
+		}
+		int[][] res =  new int[n][n];
+		for(int i=0; i<n ;i++) {
+			for(int j=0; j<n ;j++) {
+				res[i][j]=matrix1[i][j]*matrix2[j][i];
+			}	
+		}
+		System.out.println("Multiplication of matrix");
+		for(int i=0; i<n ;i++) {
+			for(int j=0; j<n ;j++) {
+				System.out.print(res[i][j]+" ");
+			}	
+		System.out.println();
+		}
+	}
+}

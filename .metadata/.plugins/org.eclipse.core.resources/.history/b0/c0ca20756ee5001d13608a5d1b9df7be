@@ -1,0 +1,29 @@
+package DateAndTime;
+
+import java.util.Calendar;
+
+public class Example1 {
+
+	public static void main(String[] args) {
+
+		Calendar cal = Calendar.getInstance();
+//		System.out.println("" + calendar.getTime());  
+//		calendar.add((Calendar.YEAR), 9); 
+//		calendar.add((Calendar.MONTH), 2);  
+//		System.out.println("" + calendar.getTime());
+//		int weekday = calendar.get(Calendar.DAY_OF_WEEK);
+//		System.out.println(weekday);
+//		calendar.add(Calendar.DAY_OF_MONTH, 10);    
+//      System.out.println(calendar.getTime()); 
+          
+		
+		cal.add(Calendar.HOUR, 10);
+		System.out.println("" + cal.getTime());
+		cal.add(Calendar.MINUTE, 10);
+		System.out.println("" + cal.getTime());
+		cal.add(Calendar.SECOND, 10);
+		System.out.println("" + cal.getTime());
+
+	}
+
+}

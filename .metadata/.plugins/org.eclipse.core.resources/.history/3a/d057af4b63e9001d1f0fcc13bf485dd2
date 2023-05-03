@@ -1,0 +1,25 @@
+package SinglyLinkeList;
+
+public class PalindromeLinkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	//Function to check whether the list is palindrome.
+    static boolean isPalindrome(Node head)  {
+    	
+    	Node currNode=head;
+        String str="";
+    	while(currNode!=null) {
+    		str+=currNode.data;
+    		currNode=currNode.next;
+    	}
+        
+        
+      return true;
+    }  
+
+}

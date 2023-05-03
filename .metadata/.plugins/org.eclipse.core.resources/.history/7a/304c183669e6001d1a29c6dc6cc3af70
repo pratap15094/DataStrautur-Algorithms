@@ -1,0 +1,22 @@
+package DateAndTime;
+
+import java.time.LocalDate;
+
+public class LocalDateExample {
+	
+	public static void main(String args[]) {
+		
+		LocalDate localDate = LocalDate.now();
+        System.out.println("Current Date is: " + localDate);
+        System.out.println("Year Day Date " + LocalDate.ofYearDay(2018,5));
+        System.out.println("Epoch Day " + LocalDate.ofEpochDay(1));
+        
+        /*** Getting Values from Local Date ***/
+        System.out.println(localDate.getMonth());
+        System.out.println(localDate.getMonthValue());
+        System.out.println(localDate.getDayOfWeek());
+        System.out.println(localDate.getDayOfYear());
+        System.out.println(localDate.getDayOfMonth());
+        System.out.println(localDate.getYear());
+	}
+}

@@ -1,0 +1,25 @@
+package stacks;
+
+import java.util.Stack;
+
+public class Demo {
+	public static void main(String []args) {
+		
+		Stack<Integer> stack = new Stack<>();
+		stack.push(10); // Adds the element 10 to the top of the stack   
+		stack.push(20);
+		stack.push(30);
+		stack.push(40);
+		stack.push(50);
+		System.out.println(stack);
+		int element = stack.pop(); // Removes and returns the element at the top of the stack
+		System.out.println(element);
+		int topElement = stack.peek(); // Returns the element at the top of the stack without removing it
+		System.out.println(topElement );
+		boolean empty = stack.isEmpty(); // Checks if the stack is empty
+		System.out.println(empty );
+		int position = stack.search(10); // Returns 2 since the element 10 is the second element from the top of the stack
+		System.out.println(position);
+	}
+
+}

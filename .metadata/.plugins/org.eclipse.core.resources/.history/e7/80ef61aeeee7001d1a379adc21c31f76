@@ -1,0 +1,10 @@
+package Matixes;
+
+import java.util.Scanner;
+
+public class DuplicateRows {
+    
+	Scanner scan = new Scanner(System.in);
+	int n = scan.nextInt();
+	
+}

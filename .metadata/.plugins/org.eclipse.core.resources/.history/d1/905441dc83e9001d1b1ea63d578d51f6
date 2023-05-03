@@ -1,0 +1,10 @@
+package SinglyLinkeList;
+
+public class InsertInMiddle {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

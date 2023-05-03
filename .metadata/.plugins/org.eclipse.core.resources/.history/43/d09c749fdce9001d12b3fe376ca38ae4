@@ -1,0 +1,25 @@
+package stringsProblem;
+
+import java.util.Scanner;
+
+public class TriangleShrinkingDownwards {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter Input String: ");
+		String str = scan.nextLine();
+		System.out.println("Resulted string: " + triDownwards(str));
+	}
+
+	public static String triDownwards(String S) {
+		String t = "";
+		for (int i = 0; i < S.length(); i++) {
+			for (int j = 0; j < i; j++) {
+				t = t + ".";
+			}
+			t += S.substring(i, S.length());
+		}
+		return t;
+	}
+}

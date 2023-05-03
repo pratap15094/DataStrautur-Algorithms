@@ -1,0 +1,9 @@
+package DateAndTime;
+
+public class PrintWeekendDays {
+	
+	public static void main(String args[]) {
+		
+	}
+
+}

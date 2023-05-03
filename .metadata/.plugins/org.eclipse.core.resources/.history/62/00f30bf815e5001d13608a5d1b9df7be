@@ -1,0 +1,19 @@
+package SEBI;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class cipherTextCoversion {
+	
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+		String inputStr= scan.nextLine();
+		char[] ch = new char[26];
+		for(int i=0;i<26;i++) {
+			ch[i]=(char)(i+'A');
+		}
+		System.out.println(Arrays.toString(ch));
+		
+	}
+
+}

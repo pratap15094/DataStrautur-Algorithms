@@ -1,0 +1,26 @@
+package Matixes;
+import java.util.Scanner;
+
+public class DuplicateColumns {
+   
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter the size of matrix: ");
+		int row =  scan.nextInt();
+		int column = scan.nextInt();
+		int[][] matrix = new int[row][column];
+		
+		
+	}
+	
+	
+	
+	public static void DuplicateColumns() {
+		
+	}
+	
+}
+
+
+

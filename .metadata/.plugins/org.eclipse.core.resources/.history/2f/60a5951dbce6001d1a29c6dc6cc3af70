@@ -1,0 +1,9 @@
+package DateAndTime;
+
+public class printDay {
+	
+	public static void main(String args[]) {
+		
+	}
+
+}

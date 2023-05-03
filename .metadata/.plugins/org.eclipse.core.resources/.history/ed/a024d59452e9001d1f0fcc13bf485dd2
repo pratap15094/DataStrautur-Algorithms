@@ -1,0 +1,42 @@
+package SinglyLinkeList;
+
+import java.util.Scanner;
+
+public class DeleteNode {
+
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter Size of LinkedList: ");
+		int n = scan.nextInt();
+		LinkedList list = new LinkedList();
+		for (int i = 1; i <= n; i++) {
+
+			int data = scan.nextInt();
+			list.addLast(data);
+		}
+		list.display();
+//		System.out.println();
+//		int size = CountNode(list.head);
+//		System.out.print("size of linkedlist:" + size);
+	}
+	
+	public static void deleteNode(Node head, int key) {
+		
+		if(head==null) {
+			return;
+		}
+		if(head.data==key) {
+			head=head.next;
+		}
+		
+		Node currNode= head;
+		Node prevNode =null;
+		while(currNode.next!=null) {
+			if(currNode.data==key) {
+			      currNode=	
+			}
+		currNode= currNode.next;
+		}
+	}
+
+}

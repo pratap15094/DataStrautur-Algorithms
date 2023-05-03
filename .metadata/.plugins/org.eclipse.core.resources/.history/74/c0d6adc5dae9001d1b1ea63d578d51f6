@@ -1,0 +1,15 @@
+package strinsProblem;
+
+import java.util.Scanner;
+
+public class TriangleShrinkingDownwards {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter Input String: ");
+		String str = scan.nextLine();
+		System.out.println("Resulted string: " + reciprocalString(str));
+	}
+
+}

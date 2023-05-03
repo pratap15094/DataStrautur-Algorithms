@@ -1,0 +1,19 @@
+package DateAndTime;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+public class Demo {
+	public static void main(String[] args) {
+	    LocalDate localDate = LocalDate.now(); // Create a date object
+	    System.out.println(localDate); // Display the current date
+	    
+	    LocalTime localTime = LocalTime.now();
+	    System.out.println(localTime);
+	    
+	    LocalDateTime localDateTime = LocalDateTime.now();
+	    System.out.println(localDateTime);
+	  }
+
+}

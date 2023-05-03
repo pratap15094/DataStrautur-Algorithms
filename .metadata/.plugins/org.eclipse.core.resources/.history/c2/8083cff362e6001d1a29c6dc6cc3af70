@@ -1,0 +1,11 @@
+package DateAndTime;
+
+import java.time.LocalDate;
+
+public class NewDateTimeExample {
+
+	public static void main() {
+
+		LocalDate localDate = LocalDate.now();
+	}
+}

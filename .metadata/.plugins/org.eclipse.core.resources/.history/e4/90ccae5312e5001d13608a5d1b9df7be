@@ -1,0 +1,63 @@
+package SEBI;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class NonWorkingDays {
+
+	public static void main(String args[]) {
+		System.out.println("Enter date in the formate DD-MM-YYYY");
+		Scanner scan = new Scanner(System.in);
+		String dateStr = scan.nextLine();
+		Date inputDate = parseDate(dateStr);
+
+		SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+		System.out.println("Day of" + dateStr + " is " + sdf.format(inputDate));
+		System.out.println("Enter date pf this months whic are holiday(seprated by comma):");
+		String holidays = scan.nextLine();
+		String holidaysList[] = holidays.split(",");
+		ArrayList<Integer> holidaysIntList = new ArrayList<>();
+
+		for (String s : holidaysList) {
+			holidaysIntList.add(Integer.valueOf(s));
+		}
+
+		System.out.println("Number of non working days in this moanths(Including satuday sunday and holidays)");
+		System.out.println("Non working days =" + calculateNonWorkingDays(inputDate, holidaysIntList));
+
+	}
+
+	public static int calculateNonWorkingDays(Date inputDate, ArrayList<Integer> holidaysIntList) {
+
+		Calendar startCal = Calendar.getInstance();
+		Calendar endCal = Calendar.getInstance();
+		startCal.setTime(inputDate);
+		endCal.setTime(inputDate);
+
+		startCal.set(Calendar.DAY_OF_MONTH, 1);
+		endCal.set(Calendar.DAY_OF_MONTH, endCal.getActualMaximum(Calendar.DAY_OF_MONTH));
+
+		int nonWorkingDays = 0;
+		do {
+			if (startCal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY
+					|| startCal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY
+					|| holidaysIntList.contains(startCal.get(Calendar.DAY_OF_MONTH))) {
+				++nonWorkingDays;
+			}
+         startCal.add(Calendar.DAY_OF_MONTH, 1);
+		} while (startCal.getTimeInMillis() <= endCal.getTimeInMillis());
+		return nonWorkingDays;
+	}
+
+	public static Date parseDate(String date) {
+		try {
+			return new SimpleDateFormat("dd-mm-yyyy").parse(date);
+		} catch (ParseException e) {
+			return null;
+		}
+	}
+}

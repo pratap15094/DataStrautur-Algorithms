@@ -1,0 +1,50 @@
+package binary_tree;
+
+import java.util.*;
+
+public class BinaryTree {
+	public static void main(String[] args) {
+		TreeCreation t = new TreeCreation();
+		Node root = t.create();
+		t.preorder(root);
+	}
+}
+
+class TreeCreation {
+	Node create() {
+		int data;
+		Scanner scan = new Scanner(System.in);
+		Node root = null;
+		data = scan.nextInt();
+		if (data == -1) {
+			return null;
+		}
+		root = new Node(data);
+		System.out.print("enter left child " + root.data);
+		root.left = create();
+		System.out.print("enter right child " + root.data);
+		root.right = create();
+		return root;
+	}
+
+	void preorder(Node root) {
+		if (root == null)
+			return;
+		System.out.print(root.data + " ");
+		preorder(root.left);
+		preorder(root.right);
+	}
+
+}
+
+class Node {
+	int data;
+	Node left;
+	Node right;
+
+	Node(int data) {
+		this.data = data;
+		this.left = null;
+		this.right = null;
+	}
+}

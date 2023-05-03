@@ -1,0 +1,33 @@
+package strinsProblem;
+
+import java.util.Scanner;
+
+public class ReciprocalOfLetters {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter Input String: ");
+		String str = scan.nextLine();
+		System.out.println("Resulted string: " + reciprocalString(str));
+	}
+
+	public static String reciprocalString(String S) {
+
+		String str = "";
+		for (int i = 0; i < S.length(); i++) {
+			char ch =S.charAt(i);
+			if (S.charAt(i) >= 'A' && S.charAt(i) <= 'Z') {
+                  str+=(char)('A'+'Z'-ch);
+			}
+			else if (S.charAt(i) >= 'a' && S.charAt(i) <= 'z') {
+				str+=(char)('a'+'z'-ch);
+			}
+			else {
+				str+=S.charAt(i);
+			}
+		}
+	return str;
+	}
+
+}

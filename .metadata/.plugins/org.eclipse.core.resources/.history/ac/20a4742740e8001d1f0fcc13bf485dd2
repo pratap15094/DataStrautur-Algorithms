@@ -1,0 +1,18 @@
+package Matixes;
+
+import java.util.Scanner;
+
+public class MatrixRotation {
+
+	Scanner scan = new Scanner(System.in);System.out.println("Enter N*N matrix");
+	int n = scan.nextInt();
+
+	System.out.println("Enter matrix element");
+	int[][] matrix = new int[n][n];for(
+	int i = 0;i<n;i++)
+	{
+		for (int j = 0; j < n; j++) {
+			matrix[i][j] = scan.nextInt();
+		}
+	}
+}}

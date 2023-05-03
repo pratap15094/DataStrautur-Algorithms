@@ -1,0 +1,38 @@
+package DateAndTime;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class NonWorkingDays {
+	
+	
+public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter holidays: ");
+		String holiday = scan.nextLine();
+		String[] arr= holiday.split(",");
+		System.out.println("Enter Date in this formate DD-MM-YYYY: ");
+		String date = scan.nextLine();
+		String[] arr1= holiday.split("-");
+		
+		
+		LocalDate localDate1 = LocalDate.of(Integer.parseInt(arr[2]), Integer.parseInt(arr[1]), Integer.parseInt(arr[0]));
+		LocalDate localDate = LocalDate.of(Integer.parseInt(arr[2]), Integer.parseInt(arr[1]), Integer.parseInt(arr[0]));
+
+		int nonWorkingDays=0;
+		while(localDate.getMonth() ==localDate1.getMonth() ) {
+			
+			DayOfWeek dayOfWeek =  localDate.getDayOfWeek();
+			if(dayOfWeek==DayOfWeek.SATURDAY || dayOfWeek==DayOfWeek.SUNDAY) {
+//				System.out.println(dayOfWeek+"-->"+ localDate);
+				nonWorkingDays++;
+			}
+		localDate=localDate.plusDays(1);
+		}
+	System.out.println(nonWorkingDays+arr.length);
+	}
+
+}

@@ -1,0 +1,18 @@
+package SEBI;
+
+import java.util.Scanner;
+
+public class BinaryToHex {
+
+	public static String binaryToHexadecimal(String binaryString) {
+        int decimalValue = Integer.parseInt(binaryString, 2);
+        String hexadecimalString = Integer.toHexString(decimalValue);
+        return hexadecimalString.toUpperCase();
+    }
+    
+    public static void main(String[] args) {
+        String binaryString = "11011010.1010";
+        String hexadecimalString = binaryToHexadecimal(binaryString);
+        System.out.println("Binary: " + binaryString + " = Hexadecimal: " + hexadecimalString);
+    }
+}

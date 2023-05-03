@@ -1,0 +1,10 @@
+package SEBI;
+
+public class findDay {
+	
+	 public static void main(String[] args) {
+		 
+		
+	 }
+
+}

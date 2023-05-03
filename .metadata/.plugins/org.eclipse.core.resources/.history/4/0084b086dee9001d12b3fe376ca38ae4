@@ -1,0 +1,14 @@
+package stringsProblem;
+
+import java.util.Scanner;
+
+public class ExtractIntegers {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter Input String: ");
+		String str = scan.nextLine();
+
+	}
+
+}

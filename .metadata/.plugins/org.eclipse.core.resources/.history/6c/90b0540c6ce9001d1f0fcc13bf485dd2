@@ -1,0 +1,24 @@
+package SinglyLinkeList;
+
+public class RotateLinkedList {
+
+	public static void main(String[] args) {
+		
+
+	}
+	//Function to rotate a linked list.
+	 public Node rotate(Node head, int k) {
+		Node currNode = head;
+		while(currNode.next!=null) {
+			currNode=currNode.next;
+		}
+		currNode.next=head;
+		currNode=head;
+		while(k--!=1) {
+			currNode=currNode.next;
+		}
+		 head=currNode.next;
+		 currNode.next=null;
+	 return head;
+	 }
+}

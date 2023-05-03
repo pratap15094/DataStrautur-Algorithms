@@ -1,0 +1,39 @@
+package SinglyLinkeList;
+
+import java.util.Scanner;
+
+public class RotateLinkedList {
+
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter Size of LinkedList: ");
+		int n = scan.nextInt();
+		LinkedList list = new LinkedList();
+		for (int i = 1; i <= n; i++) {
+
+			int data = scan.nextInt();
+			list.addLast(data);
+		}
+		list.display(list.head);
+		System.out.println();
+		int k = scan.nextInt();
+		rotate(list.head, k);
+		list.display(list.head);
+	}
+
+	// Function to rotate a linked list.
+	public static Node rotate(Node head, int k) {
+		Node currNode = head;
+		while (currNode.next != null) {
+			currNode = currNode.next;
+		}
+		currNode.next = head;
+		currNode = head;
+		while (k-- != 1) {
+			currNode = currNode.next;
+		}
+		head = currNode.next;
+		currNode.next = null;
+	return head; 
+	}
+}

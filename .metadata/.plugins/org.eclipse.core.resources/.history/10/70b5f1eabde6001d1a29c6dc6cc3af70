@@ -1,0 +1,18 @@
+package DateAndTime;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class LeapYear {
+	
+	public static void main(String args[]) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter date with this format dd-mm-yyyy: ");
+		String  date = scan.nextLine();
+		String[] dateArr = date.split("-");
+		LocalDate localDate = LocalDate.of(0, 0, 0)
+		
+	}
+
+}

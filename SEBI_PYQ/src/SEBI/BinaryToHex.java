@@ -1,0 +1,24 @@
+package SEBI;
+
+import java.util.Scanner;
+
+public class BinaryToHex {
+
+	public static String binaryToHexadecimal(String binaryString) {
+        String[] parts = binaryString.split("\\.");
+        int decimalValue = Integer.parseInt(parts[0], 2);
+        String hexadecimalString = Integer.toHexString(decimalValue).toUpperCase();
+        if (parts.length > 1) {
+            decimalValue = Integer.parseInt(parts[1], 2);
+            hexadecimalString += "." + Integer.toHexString(decimalValue).toUpperCase();
+        }
+        return hexadecimalString;
+    }
+    
+    public static void main(String[] args) {
+        String binaryString = "11011010.1010";
+        String hexadecimalString = binaryToHexadecimal(binaryString);
+        System.out.println("Binary: " + binaryString);
+        System.out.println("Hexadecimal: "+ hexadecimalString);
+    }
+}

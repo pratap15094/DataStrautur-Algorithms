@@ -1,0 +1,17 @@
+package DateAndTime;
+import java.time.LocalDate;
+import java.util.Scanner;
+public class printDay {
+	
+	public static void main(String args[]) {
+		
+		Scanner scan = new Scanner(System.in);
+		String  date = scan.nextLine();
+		System.out.print("Enter date with this format dd-mm-yyyy: ");
+		String[] dateArr = date.split("-");
+		LocalDate localDate =  LocalDate.of(Integer.parseInt(dateArr[2]), Integer.parseInt(dateArr[1]), Integer.parseInt(dateArr[0]));
+		System.out.println(localDate.getDayOfWeek());
+		
+	}
+
+}

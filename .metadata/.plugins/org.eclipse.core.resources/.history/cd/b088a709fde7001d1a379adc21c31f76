@@ -1,0 +1,46 @@
+package Matixes;
+
+import java.util.Scanner;
+
+public class TwoMatrixSum {
+	
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter matrix details");
+		System.out.print("Enter rows: ");
+		int row= scan.nextInt();
+		System.out.print("Enter column: ");
+		int cal= scan.nextInt();
+		System.out.println("Enter matrix-1");
+		int[][] matrix1 =  new int[row][cal];
+		for(int i=0; i<row ;i++) {
+			for(int j=0; j<cal ;j++) {
+				matrix1[i][j]=scan.nextInt();
+			}	
+		}
+		
+	    System.out.println("Enter matrix-2");
+		int[][] matrix2 =  new int[row][cal];
+		for(int i=0; i<row ;i++) {
+			for(int j=0; j<cal ;j++) {
+				matrix2[i][j]=scan.nextInt();
+			}	
+		}
+		
+		
+		for(int i=0; i<row ;i++) {
+			for(int j=0; j<row ;j++) {
+				matrix1[i][j]=matrix1[i][j]+matrix2[i][j];
+			}	
+		}
+		
+
+		for(int i=0; i<row ;i++) {
+			for(int j=0; j<row ;j++) {
+				System.out.print(matrix1[i][j]);
+			}	
+		System.out.println();
+		}
+	}
+
+}

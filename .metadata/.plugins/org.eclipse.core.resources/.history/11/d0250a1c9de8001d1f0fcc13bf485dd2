@@ -1,0 +1,21 @@
+package SinglyLinkeList;
+
+public class SingalLinkedList {
+
+	public static void main(String args[]) {
+		
+	}
+	
+	public static void create() {
+		
+	}
+}
+
+class Node {	
+	int data;
+	Node head;
+	Node(int data, Node head){
+		this.data=data;
+		this.head=null;
+	}	
+}
